@@ -1,6 +1,7 @@
 package com.anythingsskyblue.android.library.media
 
 import android.graphics.Bitmap
+import android.net.Uri
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -21,6 +22,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.tooling.preview.Preview
+import com.anythingsskyblue.android.library.media.media_picker.MediaPicker
 import com.anythingsskyblue.android.library.media.metadata.VideoUtil
 import com.anythingsskyblue.android.library.media.ui.theme.MyApplicationTheme
 import kotlinx.coroutines.launch
@@ -52,6 +54,18 @@ class MainActivity : ComponentActivity() {
                             },
                         ) {
                             Text(text = "run")
+                        }
+
+                        var selectedImageUri by remember { mutableStateOf<Uri?>(null) }
+                        Text(text = selectedImageUri?.toString() ?: "")
+                        Button(
+                            onClick = {
+                                coroutineScope.launch {
+                                    selectedImageUri = MediaPicker.showImagePicker(this@MainActivity)
+                                }
+                            },
+                        ) {
+                            Text(text = "show gallery")
                         }
                     }
                 }

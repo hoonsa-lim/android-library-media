@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/hoonsa-lim/android-library-media.svg)](https://jitpack.io/#hoonsa-lim/android-library-media)
+
 # android-library-media
 
 ## Modules
@@ -18,7 +20,8 @@ dependencyResolutionManagement {
 //app/build.gradle
 dependencies {
     ...
-    implementation("com.github.hoonsa-lim:android-library-media:1.0.0")
+    val version = "latest release tag"
+    implementation("com.github.hoonsa-lim:android-library-media:$version")
 }
 
 ```
