@@ -36,7 +36,8 @@ android {
 dependencies {
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.activity:activity-compose:1.8.0")
-    implementation("com.github.hoonsa-lim:android-library-ui:1.0.0")
+    implementation("com.github.hoonsa-lim.android-library-ui:compose:1.0.6")
+    implementation("com.github.hoonsa-lim.android-library-ui:common:1.0.6")
 
     testImplementation("junit:junit:4.13.2")
 

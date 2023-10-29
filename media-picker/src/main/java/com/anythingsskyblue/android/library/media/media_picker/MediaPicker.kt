@@ -4,7 +4,7 @@ import android.content.Context
 import android.net.Uri
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
-import com.anythingsskyblue.android.library.ui.util.ContextUtil
+import com.anythingsskyblue.android.library.ui.common.ContextUtil
 import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlin.coroutines.resume
 object MediaPicker {
